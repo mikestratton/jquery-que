@@ -9,3 +9,41 @@ table {
 .ui-draggable, .ui-droppable {
 	background-position: top;
 }
+
+#sortable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: auto; 
+}
+    
+#sortable li { 
+    margin: 0 3px 3px 3px; 
+    padding: 0.4em; 
+    padding-left: 1.4em;
+    font-size: 1.1em; 
+    height: 18px; 
+}
+    
+#sortable li span { 
+    position: absolute; 
+    margin-left: -1.3em; 
+}
+    
+.container {
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+    
+.frm {
+    text-align:left;
+    margin:10px 20px;
+}
+    
+.ui-state {
+    border: 1px solid #c5c5c5;
+    background: #f6f6f6;
+    font-weight: normal;
+    color: #454545;
+}

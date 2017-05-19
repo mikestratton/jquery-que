@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>jQuery add()</title>
+ <script src="https://code.jquery.com/jquery-1.7.2.min.js"></script>
+
+
+  
+</head>
+
+      
+      <ul class="alist" id="alist">
+      <li>One</li>
+      <li>Two</li>
+      <li>Three</li>
+      
+      
+      </ul>
+
+ 
+    
+    
+    
+    <form id="append" action="">
+  <input type="text" id="appendvalue" value="" placeholder=" enter an item">
+  <input type="submit" value="Add an Item">
+</form>
+
+    
+<script>
+    $( "#append" ).submit(function( event ) {
+        $( ".alist" ).append( "<li>" + $('#appendvalue').val() + "</li>" );
+        $('#appendvalue').attr('placeholder',' enter an item');
+        $('#appendvalue').attr('value','');
+        event.preventDefault();
+    }); 
+</script>
+</body>
+</html>

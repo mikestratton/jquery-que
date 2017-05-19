@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>jQuery UI Sortable - Default functionality</title>
+
+<link rel="stylesheet" href="http://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+<link rel="stylesheet" href="style/style.css">
+    
+<style>
+#sortable { 
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0; 
+    width: auto; 
+}
+    
+#sortable li { 
+    margin: 0 3px 3px 3px; 
+    padding: 0.4em; 
+    padding-left: 1.4em;
+    font-size: 1.1em; 
+    height: 18px; 
+}
+    
+#sortable li span { 
+    position: absolute; 
+    margin-left: -1.3em; 
+}
+    
+.container {
+    width: 50%;
+    margin-left:auto;
+    margin-right:auto;
+}
+    
+.frm {
+    text-align:right;
+    margin:10px 20px;
+}
+</style>
+
+<script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+<script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+
+<script>
+
+</script>
+    
+</head>
+<body>
+<div class="container" id="container"> 
+    <h1>jQuery Priority Que</h1>
+  
+    
+
+    <ul id="sortable" class="sortable">
+        
+    </ul>
+
+<form id="append" class="frm" action="">
+    <input type="text" id="appendvalue" value="" placeholder=" enter an item">
+    <input type="submit" value="Add an Item">
+</form>
+ </div>
+    
+    <div id="c2"></div>
+<script>
+
+    
+    
+$( function() {
+    $( "#sortable" ).sortable();
+    $( "#sortable" ).disableSelection();
+} );
+
+$( "#append" ).submit(function( event ) {
+    $( "#sortable" ).append( "<li id=\"storevalue\" class=\"ui-state-default\"><span class=\"ui-icon ui-icon-arrow-4\"></span>" + $('#appendvalue').val() + "</li>" );
+  
+    $('#appendvalue').attr('placeholder',' enter an item');
+    $('#append').find('input:text').val(''); 
+    event.preventDefault();   
+    
+}); 
+    
+
+
+// Store
+localStorage.store_data('doc_element', document.documentElement.innerHTML);
+//localStorage.store_data = document.getElementById("container").innerHTML;
+// Retrieve
+//document.getElementById("c2").innerHTML = localStorage.store_data;
+document.documentElement.innerHTML = localStorage.store_data;
+</script>
+ 
+ 
+</body>
+</html>

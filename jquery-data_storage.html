@@ -1,0 +1,34 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>data demo</title>
+  <style>
+  div {
+    color: blue;
+  }
+  span {
+    color: red;
+  }
+  </style>
+  <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
+</head>
+<body>
+
+    
+    <ul><li id="listID">This message has been stored and retrieved.</li>
+    
+    </ul>
+    <ul><li id="return_listID">The message has been lost at sea.</li>
+    
+    </ul>
+
+<script>
+// Store
+localStorage.lastname = document.getElementById("listID").innerHTML;
+// Retrieve
+document.getElementById("return_listID").innerHTML = localStorage.lastname;
+</script>
+ 
+</body>
+</html>
